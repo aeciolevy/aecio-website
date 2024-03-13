@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Header } from "./components/Layout/Header";
 
 export const metadata: Metadata = {
   title: "Aécio Levy",
@@ -16,8 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-neutral-950">{children}</body>
-    </html>
+      <body>
+        <Header />
+        {children}
+      </body>
+    </html >
   );
 }
 

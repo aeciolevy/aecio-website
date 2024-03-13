@@ -8,6 +8,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "sans": ["Space Grotesk", "sans-serif"],
+        "serif": ["Cormorant", "serif"],
+      },
+      colors: {
+        "primary": {
+          "500": "#F17F21",
+          "900": "#6D3609",
+        },
+        "secondary": {
+          "200": "#E5E7EB",
+          "300": "#1C2035",
+          "400": "#14192E",
+          "500": "#0C0E19",
+          "600": "#080A12",
+          "700": "#040609",
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -18,3 +36,4 @@ const config: Config = {
   plugins: [],
 };
 export default config;
+
