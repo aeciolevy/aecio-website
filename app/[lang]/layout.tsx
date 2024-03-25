@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "./components/Layout/Header";
+import { Header } from "./components/layout/Header";
+import * as Fonts from './fonts';
 
 export const metadata: Metadata = {
   title: "Aécio Levy",
@@ -14,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${Fonts.grotesk.variable}`}>
         <Header />
         {children}
       </body>

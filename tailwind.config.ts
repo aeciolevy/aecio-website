@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        "sans": ["Space Grotesk", "sans-serif"],
-        "serif": ["Cormorant", "serif"],
+        "sans": ["var(--font-grotesk)", "sans-serif"],
+        "serif": ["var(--font-cormorant)", "serif"],
       },
       colors: {
         "primary": {
@@ -25,6 +25,10 @@ const config: Config = {
           "600": "#080A12",
           "700": "#040609",
         },
+        blue: {
+          1050: '#151723',
+        }
+
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
