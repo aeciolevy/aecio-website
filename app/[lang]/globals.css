@@ -5,6 +5,7 @@
 
 body {
   background-color: #0c0d11;
+  color: #FFFFFF;
 }
 
 body, p, div {
@@ -14,11 +15,5 @@ body, p, div {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-cormorant);
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Header = () => (
-  <div className="flex justify-center sm:justify-between items-center py-8 px-16 w-full bg-slate-950">
+  <div className="flex justify-center sm:justify-between items-center py-4 px-16 w-full bg-slate-950">
     <svg width={96} height={36} viewBox="0 0 96 36" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_10_236)">
         <g opacity="0.8">

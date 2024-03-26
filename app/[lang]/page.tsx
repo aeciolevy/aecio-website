@@ -4,6 +4,7 @@ import { Banner } from './components/home/Banner';
 import { BlogSummary } from './components/home/BlogSummary';
 import { Blog } from './components/home/Blog';
 import { cormorant } from './fonts';
+import { About } from './components/home/About';
 type Props = {
   params: {
     lang: Locale;
@@ -17,6 +18,7 @@ export default async function Home({ params: { lang } }: Props) {
     <main className={`${cormorant.variable} w-full p-4`}>
       <Banner />
       <Blog />
+      <About />
     </main>
   );
 }
