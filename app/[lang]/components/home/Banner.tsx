@@ -1,6 +1,6 @@
 export function Banner() {
   return (
-    <div className="w-full flex flex-col gap-4 relative sm:p-10">
+    <div className="w-full flex flex-col gap-4 relative sm:p-4">
       <div className="gap-4 text-center">
         <span className="font-serif text-orange-500 text-6xl sm:text-8xl font-bold tracking-wide">
           Explore
@@ -33,7 +33,7 @@ export function Banner() {
               Receber as cartas
             </button>
           </div>
-          <div className="sm:hidden text-left text-zinc-600 text-sm font-thing leading-snug tracking-tight">
+          <div className="text-left text-zinc-600 text-sm font-thing leading-snug tracking-tight">
             Inscreva-se para receber lições práticas sobre comunicação e
             negócios online, e continue evoluindo. As lições serão enviadas em
             intervalos irregulares.

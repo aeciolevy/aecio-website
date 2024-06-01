@@ -18,7 +18,9 @@ export default async function Home({ params: { lang } }: Props) {
     <>
       <LanguageProvider dictionary={dictionary}>
         <Header dictionary={dictionary} />
-        <main className={`${cormorant.variable} w-full p-4`}>
+        <main
+          className={`${cormorant.variable} sm:w-full flex flex-col items-center p-4`}
+        >
           <Banner />
           <Blog />
           <About />
