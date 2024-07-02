@@ -9,7 +9,7 @@ export function Blog(): JSX.Element {
           Explorar o potencial individual, negócios remotos e comunicação com
           poder.
         </p>
-        <div className="flex flex-col lg:grid lg:grid-cols-2 lg:justify-center items-center gap-4 lg:gap-8 px-2">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 lg:justify-items-center items-center gap-4 lg:gap-8 px-2">
           <div className="bg-blue-1050 rounded">
             <img
               className="rounded object-cover"
