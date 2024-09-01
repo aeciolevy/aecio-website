@@ -86,3 +86,4 @@ export function Blog(): JSX.Element {
     </div>
   );
 }
+
