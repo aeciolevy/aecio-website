@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Blog(): JSX.Element {
   return (
     <div className="w-full pt-4">
@@ -78,9 +80,11 @@ export function Blog(): JSX.Element {
           </div>
         </div>
         <div className="w-full flex flex-row justify-center mt-4">
-          <button className="px-8 py-4 w-fit font-normal text-white tracking-[0] leading-[normal] rounded overflow-hidden border border-solid border-white">
-            Ler conteudo do Blog
-          </button>
+          <Link href="/blog">
+            <button className="px-8 py-4 w-fit font-normal hover:text-primary-500 text-white tracking-[0] leading-[normal] rounded overflow-hidden border border-solid hover:border-primary-500 border-white">
+              Ler conteudo do Blog
+            </button>
+          </Link>
         </div>
       </div>
     </div>

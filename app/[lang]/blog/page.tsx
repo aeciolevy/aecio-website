@@ -1,19 +1,21 @@
-import { allPosts } from "content-collections";
-import { MDXContent } from "@content-collections/mdx/react";
+import { Language } from "@/app/types/language";
+import { Header } from "../components/layout/Header";
+import { getDictionary } from "../dictionaries";
+import { EnglishBlog } from "./components/EnglishBlog";
+import { PortugueseBlog } from "./components/PortugueseBlog";
 
-export default function App() {
+export default async function Blog({ params: { lang } }: Props) {
+
+  const dictionary = await getDictionary(lang);
   return (
-    <main>
-      <h1>Posts</h1>
-      <ul>
-        {allPosts.map((post) => (
-          <li key={post._meta.path}>
-            <h2>{post.title}</h2>
-            <MDXContent code={post.mdx} />
-          </li>
-        ))}
-      </ul>
-    </main>
+    <>
+      <Header lang={lang} dictionary={dictionary} />
+      <main>
+        {lang === Language.EN && <EnglishBlog />}
+        {lang === Language.PT && <PortugueseBlog />}
+      </main>
+
+    </>
   );
 }
 
