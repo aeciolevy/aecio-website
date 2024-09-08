@@ -1,11 +1,15 @@
 import React from "react";
 import { HamburgerNavMenu } from "./HamburguerNavMenu";
+import { useLanguage } from "@/app/[lang]/context/LanguageContext";
+import { Language } from "@/app/types/language";
+import { SwitchLang } from "../SwitchLang";
 
 type HeaderProps = {
   dictionary: Record<string, string>;
+  lang: Language
 };
 
-export const Header = ({ dictionary }: HeaderProps) => {
+export const Header = ({ dictionary, lang }: HeaderProps) => {
   return (
     <div className="flex justify-center sm:justify-between items-center py-4 px-16 w-full bg-slate-950">
       <svg
@@ -56,9 +60,11 @@ export const Header = ({ dictionary }: HeaderProps) => {
       <HamburgerNavMenu />
       <div className="hidden sm:flex items-start gap-16">
         <div className="text-[#dfe5f5]">{dictionary.letters}</div>
-        <div className="text-[#dfe5f5] ">{dictionary.songLyrics}</div>
+        {lang === Language.PT && <div className="text-[#dfe5f5] ">{dictionary.songLyrics}</div>}
         <div className=" text-[#dfe5f5] ">{dictionary.about}</div>
       </div>
+      <SwitchLang />
     </div>
   );
 };
+

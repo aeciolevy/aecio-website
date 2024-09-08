@@ -1,6 +1,7 @@
 import "server-only";
+import { Language } from "@/app/types/language";
 
-export type Locale = keyof typeof dictionaries;
+export type Locale = Language;
 
 const dictionaries = {
   en: () => import("./dictionaries/en.json").then((module) => module.default),
@@ -9,3 +10,4 @@ const dictionaries = {
 };
 
 export const getDictionary = async (locale: Locale) => dictionaries[locale]();
+

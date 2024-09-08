@@ -7,11 +7,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu";
-import { useDictionary } from "../../context/LanguageContext";
+import { useLanguage } from "../../context/LanguageContext";
+import { Language } from "@/app/types/language";
 
 const HamburgerNavMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { dictionary } = useDictionary();
+  const { dictionary, language } = useLanguage();
   return (
     <div className="sm:hidden ml-auto">
       <DropdownMenu onOpenChange={(state) => setIsOpen(state)}>
@@ -20,7 +21,7 @@ const HamburgerNavMenu = () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuItem>{dictionary.letters}</DropdownMenuItem>
-          <DropdownMenuItem>{dictionary.songLyrics}</DropdownMenuItem>
+          {language === Language.PT && <DropdownMenuItem>{dictionary.songLyrics}</DropdownMenuItem>}
           <DropdownMenuItem>{dictionary.about}</DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
@@ -29,3 +30,4 @@ const HamburgerNavMenu = () => {
 };
 
 export { HamburgerNavMenu };
+

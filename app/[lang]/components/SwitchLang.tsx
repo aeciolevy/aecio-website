@@ -2,28 +2,33 @@
 
 import { Locale } from '@/app/[lang]/dictionaries'
 import { useRouter } from 'next/navigation'
+import { useLanguage } from '@/app/[lang]/context/LanguageContext'
 import { FC } from 'react'
+import { Language } from '@/app/types/language'
 
 type Props = {}
 
-const SwitchLang: FC<Props> = () => {
+export const SwitchLang: FC<Props> = () => {
   const router = useRouter()
+  const { language } = useLanguage();
 
   const switchLang = (lang: Locale) => {
     router.push(`/${lang}`)
   }
 
+  const activeLanguageStyle = "font-bold text-2xl"
+
   return (
     <div>
-      <button className="" onClick={() => switchLang('en')}>
-        English
+      <button className={`${language === Language.EN ? activeLanguageStyle : ""}`} onClick={() => switchLang(Language.EN)}>
+        🇺🇸
       </button>
-      <button className="" onClick={() => switchLang('pt')}>
-        Português
+      <span className="text-2xl"> | </span>
+      <button className={`${language === Language.PT ? activeLanguageStyle : ""}`} onClick={() => switchLang(Language.PT)}>
+        🇧🇷
       </button>
     </div >
   )
 }
 
-export default SwitchLang
 

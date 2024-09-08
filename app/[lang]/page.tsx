@@ -16,8 +16,8 @@ export default async function Home({ params: { lang } }: Props) {
   const dictionary = await getDictionary(lang);
   return (
     <>
-      <LanguageProvider dictionary={dictionary}>
-        <Header dictionary={dictionary} />
+      <LanguageProvider dictionary={dictionary} language={lang}>
+        <Header dictionary={dictionary} lang={lang} />
         <main
           className={`${cormorant.variable} sm:w-full flex flex-col items-center p-4`}
         >
@@ -29,3 +29,4 @@ export default async function Home({ params: { lang } }: Props) {
     </>
   );
 }
+
