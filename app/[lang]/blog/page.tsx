@@ -4,6 +4,12 @@ import { getDictionary } from "../dictionaries";
 import { EnglishBlog } from "./components/EnglishBlog";
 import { PortugueseBlog } from "./components/PortugueseBlog";
 
+type Props = {
+  params: {
+    lang: Language;
+  };
+};
+
 export default async function Blog({ params: { lang } }: Props) {
 
   const dictionary = await getDictionary(lang);

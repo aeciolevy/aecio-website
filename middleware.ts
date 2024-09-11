@@ -7,11 +7,11 @@ let locales = ["en", "pt"];
 
 // Get the preferred locale, similar to above or using a library
 function getLocale(request: NextRequest) {
-  const acceptedLanguage = request.headers.get("accept-language") ?? undefined;
-  let headers = { "accept-language": acceptedLanguage };
-  let languages = new Negotiator({ headers }).languages();
+  const partialPath = request?.headers?.get("next-url");
+  const paths = partialPath?.split("/") || [];
+  const matchedLocale = paths.find((path) => locales.includes(path));
 
-  return match(languages, locales, defaultLocale);
+  return matchedLocale || defaultLocale;
 }
 
 export function middleware(request: NextRequest) {
@@ -26,8 +26,6 @@ export function middleware(request: NextRequest) {
   if (pathnameIsMissingLocale) {
     const locale = getLocale(request);
 
-    // e.g. incoming request is /products
-    // The new URL is now /en-US/products
     return NextResponse.redirect(
       new URL(`/${locale}/${pathname}`, request.url),
     );
@@ -42,3 +40,4 @@ export const config = {
     // '/'
   ],
 };
+
