@@ -19,8 +19,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-grotesk)", "sans-serif"],
-        serif: ["var(--font-cormorant)", "serif"],
+        fira: ["var(--font-fira)"],
       },
       colors: {
         primary: {

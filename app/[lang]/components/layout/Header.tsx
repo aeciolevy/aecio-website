@@ -68,7 +68,10 @@ export const Header = ({ dictionary, lang }: HeaderProps) => {
       <HamburgerNavMenu />
       <div className="hidden sm:flex items-start gap-16">
         <Link href="/blog" className={`${linkStyle}`}>{dictionary.letters}</Link>
-        {lang === Language.PT && <div className={`${linkStyle}`}>{dictionary.songLyrics}</div>}
+        {lang === Language.PT && (
+          <Link href="/composicoes" className={`${linkStyle}`}>{dictionary.songLyrics}</Link>
+        )
+        }
         <Link href="/about" className={`${linkStyle}`}>{dictionary.about}</Link>
       </div>
       <SwitchLang />
