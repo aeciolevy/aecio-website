@@ -20,6 +20,7 @@ const config = {
     extend: {
       fontFamily: {
         fira: ["var(--font-fira)"],
+        dancing: ["var(--font-dancing)"],
       },
       colors: {
         primary: {

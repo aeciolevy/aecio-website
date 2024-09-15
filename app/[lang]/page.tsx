@@ -1,10 +1,8 @@
 import { Locale, getDictionary } from "./dictionaries";
-import { Banner } from "./components/home/Banner";
-import { Blog } from "./components/home/Blog";
-import { cormorant } from "./fonts";
-import { About } from "./components/home/About";
 import { Header } from "./components/layout/Header";
 import { LanguageProvider } from "./context/LanguageContext";
+import { Language } from "@/app/types/language";
+import { MainPortuguese } from "./components/home/MainPortuguese";
 
 type Props = {
   params: {
@@ -19,11 +17,9 @@ export default async function Home({ params: { lang } }: Props) {
       <LanguageProvider dictionary={dictionary} language={lang}>
         <Header dictionary={dictionary} lang={lang} />
         <main
-          className={`${cormorant.variable} sm:w-full flex flex-col items-center p-4`}
+          className={`sm:w-full flex flex-col items-center p-4`}
         >
-          <Banner />
-          <Blog />
-          <About />
+          {lang === Language.PT && <MainPortuguese />}
         </main>
       </LanguageProvider>
     </>

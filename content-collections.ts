@@ -8,6 +8,9 @@ const posts = defineCollection({
   schema: (z) => ({
     title: z.string(),
     summary: z.string(),
+    date: z.string(),
+    published: z.boolean(),
+    thumbnail: z.string().optional(),
   }),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document);
@@ -25,6 +28,9 @@ const letters = defineCollection({
   schema: (z) => ({
     title: z.string(),
     summary: z.string(),
+    date: z.string(),
+    published: z.boolean(),
+    thumbnail: z.string().optional(),
   }),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document);
