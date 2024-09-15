@@ -3,7 +3,7 @@ import { allLetters } from "content-collections";
 import { sortDescending } from "@/app/lib/parseDate";
 
 export function BlogPT(): JSX.Element {
-  const sortedByLastModified = allLetters.sort(sortDescending);
+  const sortedByLastModified = allLetters.sort(sortDescending).filter((letter) => letter.published);
 
   return (
     <div className="w-full pt-4">
