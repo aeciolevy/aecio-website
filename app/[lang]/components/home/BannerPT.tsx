@@ -1,7 +1,7 @@
 export function BannerPT() {
   return (
     <div className="w-full flex flex-col gap-4 relative sm:p-4">
-      <div className="gap-4 text-left sm:text-center">
+      <div className="gap-4 text-left sm:text-center p-2 sm:p-4">
         <span className="text-white text-4xl sm:text-5xl font-bold tracking-wide">
           Trabalhe de qualquer lugar. Consquiste sua autonomia.
         </span>
@@ -16,18 +16,16 @@ export function BannerPT() {
         <span className="sm:hidden text-2xl break-words whitespace-normal text-orange-500 -rotate-1 italic font-dancing">
           (estou no processo ainda não cheguei lá)
         </span>
-        <br />
       </div>
-      <div className="w-full text-left sm:text-xl sm:text-center text-neutral-400 font-thin tracking-tight">
+      <div className="w-full text-left sm:text-xl sm:text-center text-neutral-400 font-light tracking-tight p-2 sm:p-4">
         Documentação do processo de um criar um negócio totalmente remoto.
         <br />
         Reflexões de como conquistar liberdade financeira e de tempo, a tão sonhada AUTONOMIA.
         <br />
         Como chegar no nível de fazer apenas o que eu tenho interesse e gosto.
       </div>
-      <br className="sm:hidden" />
-      <div className="w-full m-auto lg:w-3/4 xl:w-2/4">
-        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-0 sm:p-10">
+      <div className="w-full m-auto lg:w-3/4 xl:w-2/4 p-2 sm:p-4">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-0">
           <input
             className="bg-gray-800 w-full sm:w-3/4 rounded-md text-gray-400 text-base font-normal p-4"
             placeholder="Digite seu e-mail"
@@ -37,7 +35,7 @@ export function BannerPT() {
               Receber as cartas
             </button>
           </div>
-          <div className="text-left text-zinc-600 text-sm font-thing leading-snug tracking-tight">
+          <div className="text-left text-neutral-400 text-sm font-thin leading-snug tracking-tight">
             Inscreva-se para receber lições práticas sobre comunicação e
             negócios online, e continue evoluindo. As lições serão enviadas em
             intervalos irregulares.

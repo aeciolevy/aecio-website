@@ -6,7 +6,7 @@ export function BlogPT(): JSX.Element {
   const sortedByLastModified = allLetters.sort(sortDescending).filter((letter) => letter.published);
 
   return (
-    <div className="w-full pt-4">
+    <div className="w-full p-2 sm:p-4">
       <div>
         <h1 className="text-3xl font-medium text-white text-center tracking-[0.36px] leading-[normal]">
           Lista das últimas cartas
