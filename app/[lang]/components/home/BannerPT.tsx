@@ -17,7 +17,7 @@ export function BannerPT() {
           (estou no processo ainda não cheguei lá)
         </span>
       </div>
-      <div className="w-full text-left sm:text-xl sm:text-center text-neutral-400 font-light tracking-tight p-2 sm:p-4">
+      <div className="w-full text-left sm:text-lg sm:text-center text-neutral-400 font-light p-2 sm:p-4">
         Documentação do processo de um criar um negócio totalmente remoto.
         <br />
         Reflexões de como conquistar liberdade financeira e de tempo, a tão sonhada AUTONOMIA.
@@ -34,11 +34,6 @@ export function BannerPT() {
             <button className="text-slate-950 text-base font-normal p-4">
               Receber as cartas
             </button>
-          </div>
-          <div className="text-left text-neutral-400 text-sm font-thin leading-snug tracking-tight">
-            Inscreva-se para receber lições práticas sobre comunicação e
-            negócios online, e continue evoluindo. As lições serão enviadas em
-            intervalos irregulares.
           </div>
         </div>
       </div>

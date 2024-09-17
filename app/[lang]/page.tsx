@@ -17,7 +17,7 @@ export default async function Home({ params: { lang } }: Props) {
       <LanguageProvider dictionary={dictionary} language={lang}>
         <Header dictionary={dictionary} lang={lang} />
         <main
-          className={`sm:w-full flex flex-col items-center p-4 sm:p-16 xl:p-24`}
+          className={`sm:w-full flex flex-col items-center space-y-4 sm:space-y-12 p-4 sm:p-16 xl:p-24`}
         >
           {lang === Language.PT && <MainPortuguese />}
         </main>

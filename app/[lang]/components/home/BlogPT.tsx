@@ -8,13 +8,13 @@ export function BlogPT(): JSX.Element {
   return (
     <div className="w-full p-2 sm:p-4">
       <div>
-        <h1 className="text-3xl font-medium text-white text-center tracking-[0.36px] leading-[normal]">
+        <h1 className="text-5xl font-semibold text-white text-center tracking-[0.36px] leading-[normal]">
           Lista das últimas cartas
         </h1>
-        <p className="p-4 text-[#858a96] text-lg text-center tracking-[0.22px] leading-[normal]">
+        <p className="p-4 text-neutral-400 font-light text-lg text-center leading-[normal]">
           Explorar o potencial individual, negócios remotos e aproveitar a vida.
         </p>
-        <div className="flex flex-col lg:grid lg:grid-cols-2 lg:justify-items-center items-center gap-4 lg:gap-12 lg:px-20 px-2">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 lg:justify-items-center items-center gap-4 lg:gap-12">
           {sortedByLastModified.map((letter) => (
             <div key={letter._meta.path} className="rounded">
               <img
@@ -34,10 +34,10 @@ export function BlogPT(): JSX.Element {
           ))}
         </div>
         <div className="w-full flex flex-row justify-center mt-4">
-          <Link href="/blog">
-            <button className="px-8 py-4 w-fit font-normal hover:text-primary-500 text-white tracking-[0] leading-[normal] rounded overflow-hidden border border-solid hover:border-primary-500 border-white">
-              Ler conteudo do Blog
-            </button>
+          <Link href="/blog"
+            className="px-8 py-4 w-fit font-normal hover:text-primary-500 text-white tracking-[0] leading-[normal] rounded overflow-hidden border border-solid hover:border-primary-500 border-white"
+          >
+            Ler conteudo do Blog
           </Link>
         </div>
       </div>
