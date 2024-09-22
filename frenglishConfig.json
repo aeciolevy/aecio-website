@@ -1,9 +1,9 @@
 {
   "originLanguage": "en",
-  "Languages": [
+  "languages": [
     "pt"
   ],
-  "translationPath": [
+  "translationPaths": [
     "./app/[lang]/dictionaries/**"
   ]
 }
