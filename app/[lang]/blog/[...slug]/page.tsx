@@ -10,7 +10,7 @@ type BlogSlugProps = {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export const generateMetadata = ({ params }: Props) => {
+export const generateMetadata = ({ params }: BlogSlugProps) => {
   const post = allPosts.find((post: Post) => params.slug.includes(post._meta.path));
   if (!post) { return };
   return { title: post.title }
