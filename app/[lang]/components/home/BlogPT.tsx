@@ -14,7 +14,7 @@ export function BlogPT(): JSX.Element {
         <p className="p-4 text-neutral-400 font-light text-lg text-center leading-[normal]">
           Explorar o potencial individual, negócios remotos e aproveitar a vida.
         </p>
-        <div className="flex flex-col lg:grid lg:grid-cols-2 lg:justify-items-center items-center gap-4 lg:gap-12">
+        <div className="flex flex-col lg:grid lg:grid-cols-3 lg:justify-items-center items-center gap-4 lg:gap-12">
           {sortedByLastModified.map((letter) => (
             <div key={letter._meta.path} className="rounded">
               <img
