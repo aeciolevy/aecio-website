@@ -23,6 +23,12 @@ const config = {
         dancing: ["var(--font-dancing)"],
       },
       colors: {
+        brand: {
+          "background-blue": "#151723",
+          secondary: {
+            text: "#757985",
+          },
+        },
         primary: {
           "500": "#F17F21",
           "900": "#6D3609",
