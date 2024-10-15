@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      aspectRatio: {
+        "3/2": "3/2",
+      },
       fontFamily: {
         fira: ["var(--font-fira)"],
         dancing: ["var(--font-dancing)"],
