@@ -3,10 +3,12 @@ import { allPosts } from "content-collections";
 import { sortDescending } from "@/app/lib/parseDate";
 
 export function BlogEN(): JSX.Element {
-  const sortedByLastModified = allPosts.sort(sortDescending).filter((post) => post.published);
+  const sortedByLastModified = allPosts
+    .sort(sortDescending)
+    .filter((post) => post.published);
   return (
     <div className="w-full pt-4">
-      <div>
+      <div className="flex flex-col space-y-6">
         <h1 className="text-3xl font-medium text-white text-center tracking-[0.36px] leading-[normal]">
           List of the latest letters
         </h1>
@@ -33,8 +35,6 @@ export function BlogEN(): JSX.Element {
               </Link>
             </div>
           ))}
-
-
         </div>
         <div className="w-full flex flex-row justify-center mt-4">
           <Link href="/blog">
@@ -44,7 +44,6 @@ export function BlogEN(): JSX.Element {
           </Link>
         </div>
       </div>
-    </div >
+    </div>
   );
 }
-

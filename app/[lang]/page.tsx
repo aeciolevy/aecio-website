@@ -4,6 +4,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import { Language } from "@/app/types/language";
 import { MainPortuguese } from "./components/home/MainPortuguese";
 import { MainEnglish } from "./components/home/MainEnglish";
+import { Lambda } from "./components/icons/Lambda";
 
 type Props = {
   params: {
@@ -20,6 +21,9 @@ export default async function Home({ params: { lang } }: Props) {
         <main
           className={`sm:w-full flex flex-col items-center space-y-4 sm:space-y-12 p-4 sm:p-16 xl:p-24`}
         >
+          {/* <Lambda className="absolute top-32 -left-32 rotate-45" /> */}
+          {/* <Lambda className="absolute top-16 -right-48 rotate-45" /> */}
+
           {lang === Language.PT && <MainPortuguese />}
           {lang === Language.EN && <MainEnglish />}
         </main>
@@ -27,4 +31,3 @@ export default async function Home({ params: { lang } }: Props) {
     </>
   );
 }
-
