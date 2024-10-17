@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { allPosts } from "content-collections";
 import { sortDescending } from "@/app/lib/parseDate";
+import { BlogCard } from "../blog/BlogCard";
 
-export function BlogEN(): JSX.Element {
+export function BlogEN() {
   const sortedByLastModified = allPosts
     .sort(sortDescending)
     .filter((post) => post.published);
@@ -19,19 +20,11 @@ export function BlogEN(): JSX.Element {
           {sortedByLastModified.map((post) => (
             <div key={post._meta.path} className="bg-blue-1050 rounded">
               <Link href={`/blog/${post._meta.path}`}>
-                <img
-                  className="aspect-video rounded object-fit"
-                  alt="Unsplash bas"
-                  src={post.thumbnail}
+                <BlogCard
+                  title={post.title}
+                  summary={post.summary}
+                  thumbnail={post.thumbnail}
                 />
-                <div className="mt-4 inline-flex flex-col gap-4 items-start">
-                  <p className="relative w-[288px] mt-[-1.00px] font-medium text-white text-[18px] tracking-[0.18px] leading-[normal]">
-                    {post.title}
-                  </p>
-                  <p className="relative w-[295px] font-normal text-[#757985] text-[14px] tracking-[0.14px] leading-[normal]">
-                    {post.summary}
-                  </p>
-                </div>
               </Link>
             </div>
           ))}
