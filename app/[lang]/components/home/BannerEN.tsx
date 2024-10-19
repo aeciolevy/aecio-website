@@ -1,5 +1,8 @@
+import { addContactToLoop } from "@/server/actions/loops";
+import { SubmitButtonForLoops } from "../SubmitButtonForLoops";
 import { Lambda } from "../icons/Lambda";
 import { EmailInput } from "./EmailInput";
+import { SignUpNewsLetter } from "../SignUpNewsletter";
 
 export function BannerEN() {
   return (
@@ -34,12 +37,7 @@ export function BannerEN() {
       </div>
       <div className="w-full m-auto lg:w-3/4 xl:w-2/4 p-2 sm:p-4">
         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-0">
-          <EmailInput />
-          <div className="sm:-ml-2 bg-orange-500 w-full sm:w-1/4 md:w rounded-lg justify-center items-center inline-flex">
-            <button className="text-slate-950 text-base font-normal p-4">
-              Receive the letters
-            </button>
-          </div>
+          <SignUpNewsLetter />
         </div>
       </div>
     </div>
