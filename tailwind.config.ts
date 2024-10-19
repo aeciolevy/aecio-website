@@ -57,10 +57,21 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        blink: {
+          '0%, 100%': { opacity: '1', color: 'currentColor' }, // Color blink
+          '50%': { opacity: '0.5' }, // Half-transparent at the middle
+        },
+        fadeOut: {
+          '0%': { opacity: '1' }, // Fully visible
+          '100%': { opacity: '0' }, // Fully transparent
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'blink': 'blink 1s linear infinite', // Blink forever
+        'blink-and-fade': 'blink 1s ease-in-out 3s, fadeOut 1s forwards 3s', // Blink for 3s, then fade out
+
       },
     },
     backgroundImage: {

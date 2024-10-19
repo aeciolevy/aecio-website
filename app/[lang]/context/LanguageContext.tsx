@@ -1,5 +1,6 @@
 "use client";
 import { createContext, useContext } from "react";
+import React from "react";
 
 interface LanguageContextProps {
   dictionary: Record<string, string>;

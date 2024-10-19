@@ -9,7 +9,6 @@ const loopEmailFormSchema = z.object({
 });
 
 export const addContactToLoop = async (prevState: any, formData: FormData) => {
-  console.log(`### formData`, formData);
   const validateFields = loopEmailFormSchema.safeParse({
     email: formData.get("email"),
   });

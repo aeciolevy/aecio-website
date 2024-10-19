@@ -8,7 +8,6 @@ type SubmitButtonForLoopsProps = {
 };
 export function SubmitButtonForLoops({ children }: SubmitButtonForLoopsProps) {
   const { pending } = useFormStatus();
-  console.log("### pending", pending);
 
   return (
     <button
