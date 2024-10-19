@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Curly } from "../assets/Curly";
 import Link from "next/link";
+import { SignUpNewsLetter } from "../SignUpNewsletter";
 
 export function AboutEN() {
   return (
@@ -43,13 +44,7 @@ export function AboutEN() {
       <div className="w-full mt-4 sm:mt-12">
 
         <div className="flex flex-col sm:flex-row sm:flex-wrap mt-4 gap-4 sm:gap-0 sm:p-10">
-          <input
-            className="bg-gray-800 w-full sm:w-3/4 rounded-md text-gray-400 text-base font-normal p-4"
-            placeholder="Enter your email"
-          />
-          <div className="sm:-ml-2 bg-orange-500 w-full sm:w-1/4 rounded-lg justify-center items-center inline-flex">
-            <button className="text-slate-950 text-base font-normal p-4">Get access to the letters</button>
-          </div>
+          <SignUpNewsLetter buttonCTA="Get Access to The Letters" />
         </div>
 
         <div className="text-center">

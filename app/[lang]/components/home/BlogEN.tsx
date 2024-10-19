@@ -8,7 +8,7 @@ export function BlogEN() {
     .sort(sortDescending)
     .filter((post) => post.published);
   return (
-    <div className="w-full pt-4">
+    <div className="w-full">
       <div className="flex flex-col space-y-6">
         <h1 className="text-3xl font-medium text-white text-center tracking-[0.36px] leading-[normal]">
           List of the latest letters

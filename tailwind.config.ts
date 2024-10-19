@@ -69,8 +69,9 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        'blink': 'blink 1s linear infinite', // Blink forever
-        'blink-and-fade': 'blink 1s ease-in-out 3s, fadeOut 1s forwards 3s', // Blink for 3s, then fade out
+        'blink': 'blink 1s linear 3', // Blink forever
+        'fade-out': 'fadeOut 1s forwards', // Fade out
+        'blink-and-fade': 'blink 1s linear 5, fadeOut 1s forwards 3s', // Blink for 3s, then fade out
 
       },
     },

@@ -1,7 +1,3 @@
-import { addContactToLoop } from "@/server/actions/loops";
-import { SubmitButtonForLoops } from "../SubmitButtonForLoops";
-import { Lambda } from "../icons/Lambda";
-import { EmailInput } from "./EmailInput";
 import { SignUpNewsLetter } from "../SignUpNewsletter";
 
 export function BannerEN() {
@@ -37,7 +33,7 @@ export function BannerEN() {
       </div>
       <div className="w-full m-auto lg:w-3/4 xl:w-2/4 p-2 sm:p-4">
         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-0">
-          <SignUpNewsLetter />
+          <SignUpNewsLetter buttonCTA="Receive the letters" />
         </div>
       </div>
     </div>
