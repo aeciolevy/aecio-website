@@ -1,4 +1,5 @@
 import { SignUpNewsLetter } from "../SignUpNewsletter";
+import { englishUserGroup } from "@/lib/addUserGroups";
 
 export function BannerEN() {
   return (
@@ -14,6 +15,7 @@ export function BannerEN() {
         <span className="text-white text-4xl sm:text-5xl font-bold tracking-wide">
           {" "}
           Do what you love.
+          <br className="hidden xl:inline-block" />
           <sup className="hidden break-words whitespace-normal text-orange-500 sm:inline-block italic font-dancing">
             (I’m in the process, not there yet)
           </sup>
@@ -33,7 +35,7 @@ export function BannerEN() {
       </div>
       <div className="w-full m-auto lg:w-3/4 xl:w-2/4 p-2 sm:p-4">
         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-0">
-          <SignUpNewsLetter buttonCTA="Receive the letters" />
+          <SignUpNewsLetter buttonCTA="Receive the letters" userGroup={englishUserGroup} />
         </div>
       </div>
     </div>

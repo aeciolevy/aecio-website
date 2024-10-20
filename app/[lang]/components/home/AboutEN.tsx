@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Curly } from "../assets/Curly";
 import Link from "next/link";
+import { englishUserGroup } from "@/lib/addUserGroups";
 import { SignUpNewsLetter } from "../SignUpNewsletter";
 
 export function AboutEN() {
@@ -44,7 +44,7 @@ export function AboutEN() {
       <div className="w-full mt-4 sm:mt-12">
 
         <div className="flex flex-col sm:flex-row sm:flex-wrap mt-4 gap-4 sm:gap-0 sm:p-10">
-          <SignUpNewsLetter buttonCTA="Get Access to The Letters" />
+          <SignUpNewsLetter buttonCTA="Get Access to The Letters" userGroup={englishUserGroup} />
         </div>
 
         <div className="text-center">
