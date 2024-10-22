@@ -15,22 +15,21 @@ export function BannerPT() {
         <span className="text-white text-4xl sm:text-5xl font-bold tracking-wide">
           {" "}
           Faça o que você gosta.
-          <sup className="hidden break-words whitespace-normal text-orange-500 sm:inline-block italic font-dancing">
-            (estou no processo ainda não cheguei lá)
+          <sup className="hidden text-[22px] break-words whitespace-normal text-orange-500 sm:inline-block italic font-dancing">
+            (Essa é a minha visão, o caminho que eu estou percorrendo 👇)
           </sup>
         </span>
         <br className="sm:hidden" />
         <span className="sm:hidden text-2xl break-words whitespace-normal text-orange-500 -rotate-1 italic font-dancing">
-          (estou no processo ainda não cheguei lá)
+          (Essa é a minha visão, o caminho que eu estou percorrendo 👇)
         </span>
       </div>
-      <div className="w-full text-left sm:text-lg sm:text-center text-neutral-400 font-light p-2 sm:p-4">
-        Documentação do processo de um criar um negócio totalmente remoto.
+      <div className="w-full sm:w-[50%] sm:m-auto text-left sm:text-lg text-neutral-400 font-light p-2 sm:p-4">
+        O que eu publicar é escrito por mim.
         <br />
-        Reflexões de como conquistar liberdade financeira e de tempo, a tão
-        sonhada AUTONOMIA.
+        Totalmente escrito por um humano.
         <br />
-        Como chegar no nível de fazer apenas o que eu tenho interesse e gosto.
+        Documentação do meu trabalho, aprenziados e processos sem filtro.
       </div>
       <div className="w-full m-auto lg:w-3/4 xl:w-2/4 p-2 sm:p-4">
         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-0">
