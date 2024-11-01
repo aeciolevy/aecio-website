@@ -6,6 +6,22 @@ import { MainPortuguese } from "./components/home/MainPortuguese";
 import { MainEnglish } from "./components/home/MainEnglish";
 import { Lambda } from "./components/icons/Lambda";
 
+export const generateMetadata = ({ params: { lang } }: Props) => {
+  if (lang === Language.EN) {
+    return {
+      title: "My Remote Work & Business Journey | Insights by Aécio Levy",
+      description: "Discover insights from Aécio Levy—a software engineer who believes in taking small steps to achieve big goals. Explore topics on remote work, learning faster, and doing what you love.",
+      keywords: "remote work, learning faster, software engineer, aspiring entrepreneur, songwriter, Brazilian living in Canada, personal development, do what you love, business insights, accelerated learning",
+    };
+  } else if (lang === Language.PT) {
+    return {
+      title: "Minha Jornada de Trabalho Remoto e Negócios | Insights por Aécio Levy",
+      description: "Descubra insights de Aécio Levy—um engenheiro de software que acredita em dar pequenos passos para alcançar grandes objetivos. Explore tópicos sobre trabalho remoto, aprendizado acelerado e fazer o que você ama.",
+      keywords: "trabalho remoto, aprendizado acelerado, engenheiro de software, aspirante a empreendedor, compositor, brasileiro morando no Canadá, desenvolvimento pessoal, faça o que você ama, insights de negócios, aprendizado acelerado",
+    }
+  }
+}
+
 type Props = {
   params: {
     lang: Locale;
