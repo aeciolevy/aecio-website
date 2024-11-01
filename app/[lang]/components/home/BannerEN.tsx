@@ -26,13 +26,11 @@ export function BannerEN() {
         </span>
       </div>
       <div className="w-full sm:w-[50%] sm:m-auto text-left sm:text-lg  text-neutral-400 font-light p-2 sm:p-4">
-        What I publish is written by me.
-        <br />
-        Fully written by a human.
+        Fully written by a human. What I publish is written by me.
         <br />
         Documentation of my work, learnings, and processes without a filter.
       </div>
-      <div className="w-full m-auto lg:w-3/4 p-2 sm:p-4">
+      <div className="w-full m-auto lg:w-3/4 xl:w-2/4 p-2 sm:p-4">
         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-0">
           <SignUpNewsLetter buttonCTA="Receive the letters" userGroup={englishUserGroup} />
         </div>

@@ -36,18 +36,20 @@ export const SignUpNewsLetter = ({ buttonCTA, userGroup }: SignupNewsLetterProps
   }
 
   return (
-    <form className="w-full flex flex-row" onSubmit={handleSubmit} >
-      <EmailInput
-        type="email"
-        name="email"
-        value={email}
-        onChange={(e) => setEmail((e.target as HTMLInputElement).value)} />
-      <div className="sm:-ml-2 bg-orange-500 hover:bg-orange-600 basis-1/3 rounded-lg justify-center items-center inline-flex">
-        <SubmitButtonForLoops pending={formState.pending}>{buttonCTA}</SubmitButtonForLoops>
-      </div>
+    <>
+      <form className="w-full flex flex-row" onSubmit={handleSubmit} >
+        <EmailInput
+          type="email"
+          name="email"
+          value={email}
+          onChange={(e) => setEmail((e.target as HTMLInputElement).value)} />
+        <div className="sm:-ml-2 bg-orange-500 hover:bg-orange-600 basis-1/3 rounded-lg justify-center items-center inline-flex">
+          <SubmitButtonForLoops pending={formState.pending}>{buttonCTA}</SubmitButtonForLoops>
+        </div>
+      </form>
       <p className={`${formState.errorMessage ? 'text-red-500' : ''} ${formState.message ? 'animate-blink-and-fade' : ''}`}>
         {formState.errorMessage ? formState.errorMessage : formState?.message}
       </p>
-    </form>
+    </>
   );
 };

@@ -43,11 +43,11 @@ export function AboutEN() {
 
       <div className="w-full mt-4 sm:mt-12">
 
-        <div className="flex flex-col sm:flex-row sm:flex-wrap mt-4 gap-4 sm:gap-0 sm:p-10">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap mt-4 gap-4 sm:gap-0">
           <SignUpNewsLetter buttonCTA="Get Access to The Letters" userGroup={englishUserGroup} />
         </div>
 
-        <div className="text-center">
+        <div className="text-center p-6">
           <p className="font-semibold text-lg tracking-wide">
             We must explore our curiosity deeply to achieve <strong>AUTONOMY</strong> of
           </p>
