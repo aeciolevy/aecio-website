@@ -5,6 +5,7 @@ import { dancing, fira } from "./fonts";
 import { GoogleTagManager } from '@next/third-parties/google'
 import { getDictionary } from "./dictionaries";
 import { LanguageProvider } from "./context/LanguageContext";
+import { Language } from "../types/language";
 
 export const metadata: Metadata = {
   title: "Aécio Levy",
@@ -17,7 +18,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
   params: {
-    lang: string;
+    lang: Language;
   };
 }) {
   const { lang } = params;
