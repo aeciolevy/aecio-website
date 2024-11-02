@@ -32,7 +32,7 @@ export default async function AboutPage({ params: { lang } }: Props) {
   return (
     <>
       <Header lang={lang} dictionary={dictionary} />
-      <main className="p-16 lg:p-24 xl:p-32" >
+      <main className="p-6 sm:p-16 lg:p-24 xl:p-32" >
         {lang === Language.PT && <AboutPT />}
         {lang === Language.EN && <AboutEN />}
       </main>

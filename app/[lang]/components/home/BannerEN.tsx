@@ -16,7 +16,7 @@ export function BannerEN() {
           {" "}
           Do what you love.
           <br className="hidden md:inline-block" />
-          <sup className="hidden text-[22px] break-words whitespace-normal text-orange-500 sm:inline-block italic font-dancing">
+          <sup className="hidden text-[24px] break-words whitespace-normal text-orange-500 sm:inline-block italic font-dancing">
             (This is my vision, the path I&apos;m following 👇)
           </sup>
         </span>

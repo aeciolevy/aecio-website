@@ -11,6 +11,15 @@ function getLocale(request: NextRequest) {
 
   return matchedLocale || defaultLocale;
 }
+// Map paths between languages
+function mapPathByLocale(pathname: string, locale: string) {
+  if (pathname.startsWith("/pt/blog")) {
+    return pathname.replace("/pt/blog", "/pt/carta");
+  } else if (pathname.startsWith("/en/carta")) {
+    return pathname.replace("/en/carta", "/en/blog");
+  }
+  return pathname;
+}
 
 export function middleware(request: NextRequest) {
   // Check if there is any supported locale in the pathname
@@ -20,12 +29,19 @@ export function middleware(request: NextRequest) {
       !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
   );
 
+  const mappedPathname = mapPathByLocale(pathname, getLocale(request));
+
+  if (pathname !== mappedPathname) {
+    return NextResponse.redirect(
+      new URL(mappedPathname, request.url),
+    );
+  }
   // Redirect if there is no locale
   if (pathnameIsMissingLocale) {
     const locale = getLocale(request);
 
     return NextResponse.redirect(
-      new URL(`/${locale}/${pathname}`, request.url),
+      new URL(`/${locale}/${mappedPathname}`, request.url),
     );
   }
 }

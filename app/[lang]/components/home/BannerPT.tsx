@@ -15,7 +15,8 @@ export function BannerPT() {
         <span className="text-white text-4xl sm:text-5xl font-bold tracking-wide">
           {" "}
           Faça o que você gosta.
-          <sup className="hidden text-[22px] break-words whitespace-normal text-orange-500 sm:inline-block italic font-dancing">
+          <br className="hidden md:inline-block" />
+          <sup className="hidden text-[24px] break-words whitespace-normal text-orange-500 sm:inline-block italic font-dancing">
             (Essa é a minha visão, o caminho que eu estou percorrendo 👇)
           </sup>
         </span>
@@ -25,9 +26,8 @@ export function BannerPT() {
         </span>
       </div>
       <div className="w-full sm:w-[50%] sm:m-auto text-left sm:text-lg text-neutral-400 font-light p-2 sm:p-4">
-        O que eu publicar é escrito por mim.
-        <br />
         Totalmente escrito por um humano.
+        O que eu publicar é escrito por mim.
         <br />
         Documentação do meu trabalho, aprenziados e processos sem filtro.
       </div>

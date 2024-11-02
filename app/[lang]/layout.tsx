@@ -1,23 +1,34 @@
 import React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
-import { dancing } from "./fonts";
+import { dancing, fira } from "./fonts";
 import { GoogleTagManager } from '@next/third-parties/google'
+import { getDictionary } from "./dictionaries";
+import { LanguageProvider } from "./context/LanguageContext";
 
 export const metadata: Metadata = {
   title: "Aécio Levy",
   description: "Website about Aécio Levy",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
+  params,
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+  params: {
+    lang: string;
+  };
+}) {
+  const { lang } = params;
+  const dictionary = await getDictionary(lang);
+
   return (
     <html lang="en">
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
-      <body className={`font-fira ${dancing.variable}`}>{children}</body>
+      <LanguageProvider dictionary={dictionary} language={lang}>
+        <body className={`${fira.variable} ${dancing.variable}`}>{children}</body>
+      </LanguageProvider>
     </html>
   );
 }
