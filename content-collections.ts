@@ -1,5 +1,6 @@
 import { defineCollection, defineConfig } from "@content-collections/core";
 import { compileMDX } from "@content-collections/mdx";
+import remarkGfm from "remark-gfm";
 
 const posts = defineCollection({
   name: "posts",
@@ -13,10 +14,14 @@ const posts = defineCollection({
     thumbnail: z.string().optional(),
   }),
   transform: async (document, context) => {
-    const mdx = await compileMDX(context, document);
+    const mdx = await compileMDX(context, document, {
+      remarkPlugins: [remarkGfm]
+
+    });
     return {
       ...document,
       mdx,
+
     };
   },
 });
@@ -33,7 +38,9 @@ const letters = defineCollection({
     thumbnail: z.string().optional(),
   }),
   transform: async (document, context) => {
-    const mdx = await compileMDX(context, document);
+    const mdx = await compileMDX(context, document, {
+      remarkPlugins: [remarkGfm]
+    });
     return {
       ...document,
       mdx,

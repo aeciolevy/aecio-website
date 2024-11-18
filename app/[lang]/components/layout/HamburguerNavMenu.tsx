@@ -18,8 +18,6 @@ type HamburgerNavMenuProps = {
 const HamburgerNavMenu = ({ lang }: HamburgerNavMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const { dictionary, language } = useLanguage();
-  console.log('### dictionary:', dictionary);
-  console.log('### language:', language);
   const blogHref = lang === Language.EN ? "/blog" : "/carta";
 
   return (

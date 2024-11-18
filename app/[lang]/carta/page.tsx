@@ -1,7 +1,7 @@
 import { Header } from "../components/layout/Header";
 import { getDictionary } from "../dictionaries";
 import { Language } from "@/app/types/language";
-import { PortugueseBlog } from "../blog/components/PortugueseBlog";
+import { PortugueseBlog } from "./components/PortugueseBlog";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

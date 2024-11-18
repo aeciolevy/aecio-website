@@ -10,9 +10,9 @@ export const PortugueseBlog = () => {
 
   return (
     <div className="w-full h-full p-12">
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-12">
+      <div className="grid grid-cols-2 md:grid-cols-3">
         {publishedAndSortedLetters.map((letter: Letter) => (
-          <Link href={`/cartas/${letter._meta.path}`} key={letter._meta.path}>
+          <Link href={`/carta/${letter._meta.path}`} key={letter._meta.path}>
             <BlogCard
               title={letter.title}
               summary={letter.summary}
